@@ -1,0 +1,139 @@
+{
+  "navbar": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "analytics": "Analytics",
+    "reports": "Reports",
+    "settings": "Settings",
+    "notifications": "Notifications",
+    "profile": {
+      "admin": "Administrator",
+      "settings": "Settings",
+      "logout": "Logout"
+    }
+  },
+  "language": {
+    "english": "English",
+    "hindi": "Hindi"
+  },
+  "dashboard": {
+    "stats": {
+      "totalUsers": "Total Users",
+      "revenue": "Revenue",
+      "orders": "Orders",
+      "products": "Products"
+    },
+    "charts": {
+      "monthlySales": "Monthly Sales",
+      "userActivity": "User Activity",
+      "revenueTrends": "Revenue Trends",
+      "sales": "Sales",
+      "active": "Active",
+      "new": "New"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "newUser": "New user registration",
+      "serverUpdate": "Server update completed",
+      "timeAgo": {
+        "minutes": "{{time}} minutes ago",
+        "hours": "{{time}} hours ago"
+      }
+    }
+  },
+  "common": {
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "Jun"
+    },
+    "days": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    }
+  },
+  "sidebar": {
+    "title": "Admin Panel",
+    "menu": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "analytics": "Analytics",
+      "reports": "Reports",
+      "settings": "Settings"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": {
+      "profile": {
+        "title": "Profile Settings",
+        "personalInfo": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "role": "Role",
+        "uploadPhoto": "Upload Photo",
+        "removePhoto": "Remove Photo"
+      },
+      "account": {
+        "title": "Account Settings",
+        "changePassword": "Change Password",
+        "currentPassword": "Current Password",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm Password",
+        "twoFactor": "Two-Factor Authentication",
+        "enable": "Enable",
+        "disable": "Disable"
+      },
+      "notifications": {
+        "title": "Notification Settings",
+        "emailNotifications": "Email Notifications",
+        "pushNotifications": "Push Notifications",
+        "updates": "Updates and News",
+        "security": "Security Alerts",
+        "newsletter": "Newsletter"
+      },
+      "appearance": {
+        "title": "Appearance",
+        "theme": "Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System Default",
+        "language": "Language"
+      }
+    },
+    "buttons": {
+      "save": "Save Changes",
+      "cancel": "Cancel",
+      "reset": "Reset",
+      "update": "Update",
+      "enable": "Enable",
+      "disable": "Disable"
+    },
+    "messages": {
+      "success": "Settings updated successfully",
+      "error": "Error updating settings",
+      "confirmReset": "Are you sure you want to reset settings?",
+      "passwordMismatch": "Passwords do not match",
+      "required": "This field is required"
+    },
+    "notifications": {
+      "statusUpdate": "Notification Status",
+      "enabled": "{{setting}} has been enabled",
+      "disabled": "{{setting}} has been disabled",
+      "emailNotifications": "Email Notifications",
+      "pushNotifications": "Push Notifications",
+      "newsUpdates": "News Updates",
+      "securityAlerts": "Security Alerts"
+    }
+  }
+} 

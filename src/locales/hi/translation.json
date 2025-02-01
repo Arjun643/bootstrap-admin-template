@@ -1,0 +1,130 @@
+{
+  "navbar": {
+    "dashboard": "डैशबोर्ड",
+    "users": "उपयोगकर्ता",
+    "analytics": "विश्लेषण",
+    "reports": "रिपोर्ट",
+    "settings": "सेटिंग्स",
+    "notifications": "सूचनाएं",
+    "profile": {
+      "admin": "व्यवस्थापक",
+      "settings": "सेटिंग्स",
+      "logout": "लॉग आउट"
+    }
+  },
+  "language": {
+    "english": "अंग्रेजी",
+    "hindi": "हिंदी"
+  },
+  "dashboard": {
+    "stats": {
+      "totalUsers": "कुल उपयोगकर्ता",
+      "revenue": "राजस्व",
+      "orders": "ऑर्डर",
+      "products": "उत्पाद"
+    },
+    "charts": {
+      "monthlySales": "मासिक बिक्री",
+      "userActivity": "उपयोगकर्ता गतिविधि",
+      "revenueTrends": "राजस्व प्रवृत्तियां",
+      "sales": "बिक्री",
+      "active": "सक्रिय",
+      "new": "नए"
+    },
+    "notifications": {
+      "title": "सूचनाएं",
+      "newUser": "नया उपयोगकर्ता पंजीकरण",
+      "serverUpdate": "सर्वर अपडेट पूर्ण",
+      "timeAgo": {
+        "minutes": "{{time}} मिनट पहले",
+        "hours": "{{time}} घंटे पहले"
+      }
+    }
+  },
+  "common": {
+    "months": {
+      "jan": "जन",
+      "feb": "फर",
+      "mar": "मार्च",
+      "apr": "अप्रै",
+      "may": "मई",
+      "jun": "जून"
+    },
+    "days": {
+      "mon": "सोम",
+      "tue": "मंगल",
+      "wed": "बुध",
+      "thu": "गुरु",
+      "fri": "शुक्र",
+      "sat": "शनि",
+      "sun": "रवि"
+    }
+  },
+  "sidebar": {
+    "title": "एडमिन पैनल",
+    "menu": {
+      "dashboard": "डैशबोर्ड",
+      "users": "उपयोगकर्ता",
+      "analytics": "विश्लेषण",
+      "reports": "रिपोर्ट्स",
+      "settings": "सेटिंग्स"
+    }
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "sections": {
+      "profile": {
+        "title": "प्रोफ़ाइल सेटिंग्स",
+        "personalInfo": "व्यक्तिगत जानकारी",
+        "firstName": "पहला नाम",
+        "lastName": "अंतिम नाम",
+        "email": "ईमेल पता",
+        "phone": "फ़ोन नंबर",
+        "role": "भूमिका",
+        "uploadPhoto": "फोटो अपलोड करें",
+        "removePhoto": "फोटो हटाएं"
+      },
+      "account": {
+        "title": "खाता सेटिंग्स",
+        "changePassword": "पासवर्ड बदलें",
+        "currentPassword": "वर्तमान पासवर्ड",
+        "newPassword": "नया पासवर्ड",
+        "confirmPassword": "पासवर्ड की पुष्टि करें",
+        "twoFactor": "द्वि-कारक प्रमाणीकरण",
+        "enable": "सक्षम करें",
+        "disable": "अक्षम करें"
+      },
+      "notifications": {
+        "title": "अधिसूचना सेटिंग्स",
+        "emailNotifications": "ईमेल सूचनाएं",
+        "pushNotifications": "पुश सूचनाएं",
+        "updates": "अपडेट और समाचार",
+        "security": "सुरक्षा अलर्ट",
+        "newsletter": "न्यूज़लेटर"
+      },
+      "appearance": {
+        "title": "दिखावट",
+        "theme": "थीम",
+        "light": "लाइट",
+        "dark": "डार्क",
+        "system": "सिस्टम डिफ़ॉल्ट",
+        "language": "भाषा"
+      }
+    },
+    "buttons": {
+      "save": "परिवर्तन सहेजें",
+      "cancel": "रद्द करें",
+      "reset": "रीसेट करें",
+      "update": "अपडेट करें",
+      "enable": "सक्षम करें",
+      "disable": "अक्षम करें"
+    },
+    "messages": {
+      "success": "सेटिंग्स सफलतापूर्वक अपडेट की गईं",
+      "error": "सेटिंग्स अपडेट करने में त्रुटि",
+      "confirmReset": "क्या आप वाकई सेटिंग्स रीसेट करना चाहते हैं?",
+      "passwordMismatch": "पासवर्ड मेल नहीं खाते",
+      "required": "यह फ़ील्ड आवश्यक है"
+    }
+  }
+} 

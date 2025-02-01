@@ -23,7 +23,7 @@ This project is a modern React application featuring AG Grid integration for pow
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v22 or higher)
 - Yarn package manager
 
 ### Demo Credentials

@@ -1,4 +1,4 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { NavbarCollapse, NavbarCollapseProps } from "react-bootstrap";
 
 interface CustomNavbarCollapseProps extends NavbarCollapseProps {

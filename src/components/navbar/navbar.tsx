@@ -3,7 +3,7 @@ import { FaBell, FaGlobe } from "react-icons/fa";
 import { CustomImage, DynamicHtmlTag } from "components";
 import { setLocalStorageData, clearLocalStorageData, getLocalStorageData } from "utility";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -27,13 +27,13 @@ const Navbar = () => {
   };
 
   const getCurrentLanguage = () => {
-    return i18n.language === 'hi' ? 'हि' : 'EN';
+    return i18n.language === "hi" ? "हि" : "EN";
   };
 
   return (
     <nav className="navbar">
       <DynamicHtmlTag type="div" className="navbar-brand">
-        {t('navbar.dashboard')}
+        {t("navbar.dashboard")}
       </DynamicHtmlTag>
 
       <div className="navbar-right">
@@ -44,19 +44,11 @@ const Navbar = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item 
-              onClick={() => changeLanguage('en')}
-              active={i18n.language === 'en'}
-              className="d-flex align-items-center"
-            >
+            <Dropdown.Item onClick={() => changeLanguage("en")} active={i18n.language === "en"} className="d-flex align-items-center">
               <span className="lang-code">EN</span>
               English
             </Dropdown.Item>
-            <Dropdown.Item 
-              onClick={() => changeLanguage('hi')}
-              active={i18n.language === 'hi'}
-              className="d-flex align-items-center"
-            >
+            <Dropdown.Item onClick={() => changeLanguage("hi")} active={i18n.language === "hi"} className="d-flex align-items-center">
               <span className="lang-code">हि</span>
               हिंदी
             </Dropdown.Item>
@@ -74,17 +66,11 @@ const Navbar = () => {
               <p className="admin-name">
                 {adminUserData?.firstName} {adminUserData?.lastName}
               </p>
-              <p className="admin-role">{t('navbar.profile.admin')}</p>
+              <p className="admin-role">{t("navbar.profile.admin")}</p>
             </div>
             <div className="profile-image">
               {adminUserData?.image ? (
-                <CustomImage
-                  src={adminUserData.image}
-                  alt="Profile"
-                  className="rounded-circle"
-                  width={40}
-                  height={40}
-                />
+                <CustomImage src={adminUserData.image} alt="Profile" className="rounded-circle" width={40} height={40} />
               ) : (
                 <span>{getInitials(adminUserData?.firstName, adminUserData?.lastName)}</span>
               )}
@@ -95,13 +81,7 @@ const Navbar = () => {
             <div className="text-center mb-3">
               <div className="profile-image mx-auto mb-2">
                 {adminUserData?.image ? (
-                  <CustomImage
-                    src={adminUserData.image}
-                    alt="Profile"
-                    className="rounded-circle"
-                    width={80}
-                    height={80}
-                  />
+                  <CustomImage src={adminUserData.image} alt="Profile" className="rounded-circle" width={80} height={80} />
                 ) : (
                   <span>{getInitials(adminUserData?.firstName, adminUserData?.lastName)}</span>
                 )}
@@ -109,25 +89,19 @@ const Navbar = () => {
               <h6 className="fw-bold mb-0">
                 {adminUserData?.firstName} {adminUserData?.lastName}
               </h6>
-              <small className="text-muted">{t('navbar.profile.admin')}</small>
+              <small className="text-muted">{t("navbar.profile.admin")}</small>
             </div>
 
-            <Dropdown.Item 
-              className="d-flex align-items-center" 
-              onClick={() => navigate("/settings")}
-            >
+            <Dropdown.Item className="d-flex align-items-center" onClick={() => navigate("/settings")}>
               <i className="bi bi-gear me-2"></i>
-              {t('navbar.profile.settings')}
+              {t("navbar.profile.settings")}
             </Dropdown.Item>
 
             <Dropdown.Divider />
 
-            <Dropdown.Item 
-              className="d-flex align-items-center text-danger" 
-              onClick={handleLogout}
-            >
+            <Dropdown.Item className="d-flex align-items-center text-danger" onClick={handleLogout}>
               <i className="bi bi-box-arrow-right me-2"></i>
-              {t('navbar.profile.logout')}
+              {t("navbar.profile.logout")}
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

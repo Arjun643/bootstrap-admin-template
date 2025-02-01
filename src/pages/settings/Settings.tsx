@@ -1,51 +1,51 @@
-import { getLocalStorageData } from 'utility';
-import React, { useState, useEffect } from 'react';
-import { useTheme } from 'context/ThemeContext';
+import { getLocalStorageData } from "utility";
+import React, { useState, useEffect } from "react";
+import { useTheme } from "context/ThemeContext";
 // The styles will now be imported through the main style.scss file
 
 const Settings: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
-  const [activeTab, setActiveTab] = useState('profile');
+  const [activeTab, setActiveTab] = useState("profile");
   const [formData, setFormData] = useState({
     // Profile Data
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
     profilePicture: null as File | null,
-    username: '',
-    gender: '',
-    image: '',
-    bio: '',
+    username: "",
+    gender: "",
+    image: "",
+    bio: "",
     // Site Settings
-    siteName: '',
-    siteEmail: '',
-    timezone: 'UTC',
+    siteName: "",
+    siteEmail: "",
+    timezone: "UTC",
     logo: null,
-    theme: 'light',
-    language: 'en',
+    theme: "light",
+    language: "en",
     notifications: true,
-    emailNotifications: true
+    emailNotifications: true,
   });
 
   // Load user data on component mount
   useEffect(() => {
     const adminUserData = getLocalStorageData("loginData", null);
-    console.log(adminUserData,'adminuserdata');
-    
+    console.log(adminUserData, "adminuserdata");
+
     if (adminUserData) {
       setFormData(prev => ({
         ...prev,
-        firstName: adminUserData.firstName || '',
-        lastName: adminUserData.lastName || '',
-        email: adminUserData.email || '',
-        username: adminUserData.username || '',
-        gender: adminUserData.gender || '',
-        image: adminUserData.image || '',
-        phone: adminUserData.phone || '',
-        bio: adminUserData.bio || '',
+        firstName: adminUserData.firstName || "",
+        lastName: adminUserData.lastName || "",
+        email: adminUserData.email || "",
+        username: adminUserData.username || "",
+        gender: adminUserData.gender || "",
+        image: adminUserData.image || "",
+        phone: adminUserData.phone || "",
+        bio: adminUserData.bio || "",
         // Keep existing profile picture if no new one is uploaded
-        profilePicture: adminUserData.profilePicture || null
+        profilePicture: adminUserData.profilePicture || null,
       }));
     }
   }, []);
@@ -54,7 +54,7 @@ const Settings: React.FC = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -63,7 +63,7 @@ const Settings: React.FC = () => {
       const file = e.target.files[0];
       setFormData(prev => ({
         ...prev,
-        profilePicture: file
+        profilePicture: file,
       }));
     }
   };
@@ -71,8 +71,8 @@ const Settings: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you can update the localStorage or make an API call to update the profile
-    console.log('Saving settings:', formData);
-    
+    console.log("Saving settings:", formData);
+
     // Example of updating localStorage
     const adminUserData = getLocalStorageData("loginData", null);
     if (adminUserData) {
@@ -83,18 +83,18 @@ const Settings: React.FC = () => {
         email: formData.email,
         phone: formData.phone,
         bio: formData.bio,
-        profilePicture: formData.profilePicture
+        profilePicture: formData.profilePicture,
       };
       localStorage.setItem("loginData", JSON.stringify(updatedData));
     }
   };
 
   const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newTheme = e.target.value as 'light' | 'dark';
+    const newTheme = e.target.value as "light" | "dark";
     toggleTheme(newTheme);
     setFormData(prev => ({
       ...prev,
-      theme: newTheme
+      theme: newTheme,
     }));
   };
 
@@ -107,46 +107,31 @@ const Settings: React.FC = () => {
 
       <div className="settings-container">
         <div className="settings-nav">
-          <button 
-            className={`nav-item ${activeTab === 'profile' ? 'active' : ''}`}
-            onClick={() => setActiveTab('profile')}
-          >
+          <button className={`nav-item ${activeTab === "profile" ? "active" : ""}`} onClick={() => setActiveTab("profile")}>
             Profile
           </button>
-          <button 
-            className={`nav-item ${activeTab === 'general' ? 'active' : ''}`}
-            onClick={() => setActiveTab('general')}
-          >
+          <button className={`nav-item ${activeTab === "general" ? "active" : ""}`} onClick={() => setActiveTab("general")}>
             General
           </button>
-          <button 
-            className={`nav-item ${activeTab === 'appearance' ? 'active' : ''}`}
-            onClick={() => setActiveTab('appearance')}
-          >
+          <button className={`nav-item ${activeTab === "appearance" ? "active" : ""}`} onClick={() => setActiveTab("appearance")}>
             Appearance
           </button>
-          <button 
-            className={`nav-item ${activeTab === 'notifications' ? 'active' : ''}`}
-            onClick={() => setActiveTab('notifications')}
-          >
+          <button className={`nav-item ${activeTab === "notifications" ? "active" : ""}`} onClick={() => setActiveTab("notifications")}>
             Notifications
           </button>
         </div>
 
         <div className="settings-content">
-          {activeTab === 'profile' && (
+          {activeTab === "profile" && (
             <div className="settings-section">
               <h2>Profile Settings</h2>
               <form onSubmit={handleSubmit}>
                 <div className="profile-picture-section">
                   <div className="profile-picture">
-                    {(formData.profilePicture || formData.image) ? (
-                      <img 
-                        src={formData.profilePicture ? 
-                          URL.createObjectURL(formData.profilePicture) : 
-                          formData.image
-                        } 
-                        alt="Profile Preview" 
+                    {formData.profilePicture || formData.image ? (
+                      <img
+                        src={formData.profilePicture ? URL.createObjectURL(formData.profilePicture) : formData.image}
+                        alt="Profile Preview"
                         className="profile-image"
                       />
                     ) : (
@@ -159,14 +144,7 @@ const Settings: React.FC = () => {
                         <i className="bi bi-camera"></i>
                         <span>Change Photo</span>
                       </label>
-                      <input
-                        type="file"
-                        id="profilePicture"
-                        name="profilePicture"
-                        accept="image/*"
-                        onChange={handleFileChange}
-                        hidden
-                      />
+                      <input type="file" id="profilePicture" name="profilePicture" accept="image/*" onChange={handleFileChange} hidden />
                     </div>
                   </div>
                 </div>
@@ -224,26 +202,12 @@ const Settings: React.FC = () => {
 
                 <div className="form-group">
                   <label htmlFor="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="Enter email address"
-                  />
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Enter email address" />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="phone">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="Enter phone number"
-                  />
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Enter phone number" />
                 </div>
 
                 <div className="form-group">
@@ -261,7 +225,7 @@ const Settings: React.FC = () => {
             </div>
           )}
 
-          {activeTab === 'general' && (
+          {activeTab === "general" && (
             <div className="settings-section">
               <h2>General Settings</h2>
               <form onSubmit={handleSubmit}>
@@ -291,12 +255,7 @@ const Settings: React.FC = () => {
 
                 <div className="form-group">
                   <label htmlFor="timezone">Timezone</label>
-                  <select 
-                    id="timezone" 
-                    name="timezone"
-                    value={formData.timezone}
-                    onChange={handleInputChange}
-                  >
+                  <select id="timezone" name="timezone" value={formData.timezone} onChange={handleInputChange}>
                     <option value="UTC">UTC</option>
                     <option value="IST">IST (UTC+5:30)</option>
                     <option value="EST">EST (UTC-5)</option>
@@ -305,12 +264,7 @@ const Settings: React.FC = () => {
 
                 <div className="form-group">
                   <label htmlFor="language">Language</label>
-                  <select 
-                    id="language" 
-                    name="language"
-                    value={formData.language}
-                    onChange={handleInputChange}
-                  >
+                  <select id="language" name="language" value={formData.language} onChange={handleInputChange}>
                     <option value="en">English</option>
                     <option value="hi">Hindi</option>
                     <option value="es">Spanish</option>
@@ -320,18 +274,12 @@ const Settings: React.FC = () => {
             </div>
           )}
 
-          {activeTab === 'appearance' && (
+          {activeTab === "appearance" && (
             <div className="settings-section">
               <h2>Appearance Settings</h2>
               <div className="form-group">
                 <label htmlFor="theme">Theme</label>
-                <select 
-                  id="theme" 
-                  name="theme"
-                  value={theme}
-                  onChange={handleThemeChange}
-                  className="theme-select"
-                >
+                <select id="theme" name="theme" value={theme} onChange={handleThemeChange} className="theme-select">
                   <option value="light">Light</option>
                   <option value="dark">Dark</option>
                 </select>
@@ -340,19 +288,14 @@ const Settings: React.FC = () => {
               <div className="form-group">
                 <label htmlFor="logo">Site Logo</label>
                 <div className="logo-upload">
-                  <input
-                    type="file"
-                    id="logo"
-                    name="logo"
-                    accept="image/*"
-                  />
+                  <input type="file" id="logo" name="logo" accept="image/*" />
                   <p className="help-text">Recommended size: 200x200px</p>
                 </div>
               </div>
             </div>
           )}
 
-          {activeTab === 'notifications' && (
+          {activeTab === "notifications" && (
             <div className="settings-section">
               <h2>Notification Settings</h2>
               <div className="form-group checkbox-group">
@@ -361,10 +304,12 @@ const Settings: React.FC = () => {
                     type="checkbox"
                     name="notifications"
                     checked={formData.notifications}
-                    onChange={(e) => setFormData(prev => ({
-                      ...prev,
-                      notifications: e.target.checked
-                    }))}
+                    onChange={e =>
+                      setFormData(prev => ({
+                        ...prev,
+                        notifications: e.target.checked,
+                      }))
+                    }
                   />
                   Enable Push Notifications
                 </label>
@@ -376,10 +321,12 @@ const Settings: React.FC = () => {
                     type="checkbox"
                     name="emailNotifications"
                     checked={formData.emailNotifications}
-                    onChange={(e) => setFormData(prev => ({
-                      ...prev,
-                      emailNotifications: e.target.checked
-                    }))}
+                    onChange={e =>
+                      setFormData(prev => ({
+                        ...prev,
+                        emailNotifications: e.target.checked,
+                      }))
+                    }
                   />
                   Enable Email Notifications
                 </label>
@@ -389,7 +336,7 @@ const Settings: React.FC = () => {
 
           <div className="settings-actions">
             <button type="submit" className="save-btn" onClick={handleSubmit}>
-              {activeTab === 'profile' ? 'Save Profile' : 'Save Changes'}
+              {activeTab === "profile" ? "Save Profile" : "Save Changes"}
             </button>
           </div>
         </div>
@@ -398,4 +345,4 @@ const Settings: React.FC = () => {
   );
 };
 
-export default Settings; 
+export default Settings;

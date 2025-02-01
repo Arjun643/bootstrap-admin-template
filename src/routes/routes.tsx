@@ -1,5 +1,5 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import { EditUser, ForgotPassword, Home, Login, UserList,Reports, Analytics, Settings} from "pages";
+import { EditUser, ForgotPassword, Home, Login, UserList, Reports, Analytics, Settings } from "pages";
 import { Error, Layout } from "components";
 
 const Router = createBrowserRouter([

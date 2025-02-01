@@ -1,4 +1,4 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { CardTitle, CardTitleProps } from "react-bootstrap";
 
 interface CustomCardBodyProps extends CardTitleProps {

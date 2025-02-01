@@ -1,4 +1,4 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { Nav, NavProps } from "react-bootstrap";
 
 interface CustomNavProps extends NavProps {

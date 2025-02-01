@@ -63,4 +63,4 @@ export interface User {
 export interface LoginData {
   username: string;
   password: string;
-} 
+}

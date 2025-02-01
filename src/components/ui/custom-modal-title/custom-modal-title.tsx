@@ -1,4 +1,4 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { ModalTitle, ModalTitleProps } from "react-bootstrap";
 
 interface CustomModalTitleProps extends ModalTitleProps {

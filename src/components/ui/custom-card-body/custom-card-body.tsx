@@ -1,4 +1,4 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { CardBody, CardBodyProps } from "react-bootstrap";
 
 interface CustomCardBodyProps extends CardBodyProps {

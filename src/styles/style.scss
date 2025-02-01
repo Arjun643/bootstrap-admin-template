@@ -2,13 +2,13 @@
 @import "fonts";
 
 // Variables
-@import 'variables';
+@import "variables";
 
 //Buttons
 @import "button";
 
 // Settings
-@import './components/settings';
+@import "./components/settings";
 
 // Notification
 @import "notification";
@@ -20,15 +20,17 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Reports
-@import './components/reports';
+@import "./components/reports";
 
 // Analytics
-@import './components/analytics';
+@import "./components/analytics";
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .layoutheightManage {
@@ -84,7 +86,7 @@ body {
       margin-right: 2rem;
       display: flex;
       align-items: center;
-      
+
       img {
         height: 35px;
         margin-right: 10px;
@@ -354,7 +356,7 @@ body {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -415,7 +417,7 @@ body {
 
 .table {
   color: var(--text-primary);
-  
+
   th {
     border-top: none;
     font-weight: 600;
@@ -500,15 +502,15 @@ body {
   height: 36px;
   min-width: 80px;
   justify-content: center;
-  
+
   &.btn-link {
     text-decoration: none;
-    
+
     &:focus {
       box-shadow: none;
     }
   }
-  
+
   .current-lang {
     font-size: 13px;
     font-weight: 600;
@@ -521,8 +523,11 @@ body {
     color: #6c757d;
     font-size: 16px;
   }
-  
-  &:hover, &:focus, &:active, &.show {
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.show {
     background-color: var(--bg-secondary) !important;
     border-color: #c1c9d0 !important;
     color: var(--text-primary) !important;
@@ -551,7 +556,7 @@ body {
     margin-bottom: 2px;
     font-size: 14px;
     color: var(--text-primary);
-    
+
     .lang-code {
       font-weight: 600;
       font-size: 13px;
@@ -565,15 +570,15 @@ body {
       margin-right: 8px;
       text-transform: uppercase;
     }
-    
+
     &:hover {
       background-color: var(--bg-secondary);
     }
-    
+
     &.active {
       background-color: var(--primary-color);
       color: white;
-      
+
       .lang-code {
         background: #0d6efd !important;
         color: white !important;
@@ -605,7 +610,7 @@ body {
       background-color: #f1f4f8 !important;
       border-color: #c1c9d0 !important;
     }
-    
+
     .dropdown-menu {
       display: block;
       opacity: 1;

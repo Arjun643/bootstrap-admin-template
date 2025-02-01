@@ -4,7 +4,6 @@ import axiosInstance from "./axiosInstance";
 
 const LOGIN_API_URL = process.env.REACT_APP_API_LOGIN_URL;
 
-
 export const userListApi = async (page: number, limit: number) => {
   try {
     const API_URL = `arjun-exiliensoft/arjun_data/data?_page=${page}&_limit=${limit}`;

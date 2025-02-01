@@ -18,7 +18,7 @@ $border-radius: 4px;
 $border-radius-lg: 8px;
 
 // Box shadow
-$box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 :root {
   // Light theme variables
@@ -31,7 +31,7 @@ $box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   --sidebar-bg: #1f2937;
   --input-bg: #ffffff;
   --input-border: #ddd;
-  
+
   // Additional light theme variables
   --primary-color: #007bff;
   --primary-hover: #0056b3;
@@ -50,7 +50,7 @@ $box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   --scroll-track: #eeeeee;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --bg-primary: #1a1a1a;
   --bg-secondary: #2d2d2d;
   --text-primary: #ffffff;
@@ -60,7 +60,7 @@ $box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   --sidebar-bg: #1f2937;
   --input-bg: #333333;
   --input-border: #404040;
-  
+
   // Additional dark theme variables
   --primary-color: #0d6efd;
   --primary-hover: #0b5ed7;
@@ -77,4 +77,4 @@ $box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   --modal-overlay: rgba(0, 0, 0, 0.75);
   --scroll-thumb: #666666;
   --scroll-track: #333333;
-} 
+}

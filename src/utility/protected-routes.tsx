@@ -7,8 +7,8 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
-    const isLoggedIn = getLocalStorageData("isLoggedIn", "false") === "true";
-    if (!isLoggedIn) {
+  const isLoggedIn = getLocalStorageData("isLoggedIn", "false") === "true";
+  if (!isLoggedIn) {
     return <Navigate to="/login" replace />;
   }
 

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { DynamicHtmlTag,CustomButton } from "components";
+import { DynamicHtmlTag, CustomButton } from "components";
 
 const Error = () => {
   const navigate = useNavigate();

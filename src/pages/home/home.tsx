@@ -1,38 +1,38 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './home.css';
-import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { useTranslation } from 'react-i18next';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./home.css";
+import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
   const { t } = useTranslation();
-  
+
   // Sample data for charts
   const salesData = [
-    { name: 'Jan', sales: 4000 },
-    { name: 'Feb', sales: 3000 },
-    { name: 'Mar', sales: 5000 },
-    { name: 'Apr', sales: 4500 },
-    { name: 'May', sales: 6000 },
-    { name: 'Jun', sales: 5500 },
+    { name: "Jan", sales: 4000 },
+    { name: "Feb", sales: 3000 },
+    { name: "Mar", sales: 5000 },
+    { name: "Apr", sales: 4500 },
+    { name: "May", sales: 6000 },
+    { name: "Jun", sales: 5500 },
   ];
 
   const userActivityData = [
-    { name: 'Mon', active: 3000, new: 1400 },
-    { name: 'Tue', active: 3500, new: 1200 },
-    { name: 'Wed', active: 4000, new: 1800 },
-    { name: 'Thu', active: 3700, new: 1600 },
-    { name: 'Fri', active: 4200, new: 2000 },
-    { name: 'Sat', active: 3800, new: 1500 },
-    { name: 'Sun', active: 3500, new: 1300 },
+    { name: "Mon", active: 3000, new: 1400 },
+    { name: "Tue", active: 3500, new: 1200 },
+    { name: "Wed", active: 4000, new: 1800 },
+    { name: "Thu", active: 3700, new: 1600 },
+    { name: "Fri", active: 4200, new: 2000 },
+    { name: "Sat", active: 3800, new: 1500 },
+    { name: "Sun", active: 3500, new: 1300 },
   ];
 
   const revenueData = [
-    { name: 'Jan', revenue: 8500 },
-    { name: 'Feb', revenue: 7200 },
-    { name: 'Mar', revenue: 9000 },
-    { name: 'Apr', revenue: 8700 },
-    { name: 'May', revenue: 11000 },
-    { name: 'Jun', revenue: 10500 },
+    { name: "Jan", revenue: 8500 },
+    { name: "Feb", revenue: 7200 },
+    { name: "Mar", revenue: 9000 },
+    { name: "Apr", revenue: 8700 },
+    { name: "May", revenue: 11000 },
+    { name: "Jun", revenue: 10500 },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="col-md-3">
           <div className="card text-white bg-primary">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.stats.totalUsers')}</h5>
+              <h5 className="card-title">{t("dashboard.stats.totalUsers")}</h5>
               <h2>1,250</h2>
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function Home() {
         <div className="col-md-3">
           <div className="card text-white bg-success">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.stats.revenue')}</h5>
+              <h5 className="card-title">{t("dashboard.stats.revenue")}</h5>
               <h2>$15,350</h2>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="col-md-3">
           <div className="card text-white bg-warning">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.stats.orders')}</h5>
+              <h5 className="card-title">{t("dashboard.stats.orders")}</h5>
               <h2>305</h2>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
         <div className="col-md-3">
           <div className="card text-white bg-danger">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.stats.products')}</h5>
+              <h5 className="card-title">{t("dashboard.stats.products")}</h5>
               <h2>125</h2>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Home() {
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.charts.monthlySales')}</h5>
+              <h5 className="card-title">{t("dashboard.charts.monthlySales")}</h5>
               <div className="chart-container">
                 <ResponsiveContainer width="100%" height={300}>
                   <BarChart data={salesData}>
@@ -96,7 +96,7 @@ export default function Home() {
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.charts.userActivity')}</h5>
+              <h5 className="card-title">{t("dashboard.charts.userActivity")}</h5>
               <div className="chart-container">
                 <ResponsiveContainer width="100%" height={300}>
                   <AreaChart data={userActivityData}>
@@ -119,7 +119,7 @@ export default function Home() {
         <div className="col-md-8">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.charts.revenueTrends')}</h5>
+              <h5 className="card-title">{t("dashboard.charts.revenueTrends")}</h5>
               <div className="chart-container">
                 <ResponsiveContainer width="100%" height={300}>
                   <LineChart data={revenueData}>
@@ -139,14 +139,14 @@ export default function Home() {
         <div className="col-md-4">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">{t('dashboard.notifications.title')}</h5>
+              <h5 className="card-title">{t("dashboard.notifications.title")}</h5>
               <div className="notification-item">
-                <p>{t('dashboard.notifications.newUser')}</p>
-                <small>{t('dashboard.notifications.timeAgo.minutes', { time: 5 })}</small>
+                <p>{t("dashboard.notifications.newUser")}</p>
+                <small>{t("dashboard.notifications.timeAgo.minutes", { time: 5 })}</small>
               </div>
               <div className="notification-item">
-                <p>{t('dashboard.notifications.serverUpdate')}</p>
-                <small>{t('dashboard.notifications.timeAgo.hours', { time: 1 })}</small>
+                <p>{t("dashboard.notifications.serverUpdate")}</p>
+                <small>{t("dashboard.notifications.timeAgo.hours", { time: 1 })}</small>
               </div>
             </div>
           </div>

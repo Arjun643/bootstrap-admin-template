@@ -1,14 +1,14 @@
 .reports-page {
   padding: 24px;
-  
+
   .reports-header {
     margin-bottom: 32px;
-    
+
     h1 {
       color: var(--text-primary);
       margin-bottom: 8px;
     }
-    
+
     p {
       color: var(--text-secondary);
     }
@@ -25,11 +25,13 @@
     border-radius: 12px;
     padding: 24px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
     .report-icon {
@@ -41,7 +43,7 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px;
-      
+
       i {
         font-size: 28px;
         color: white;
@@ -66,10 +68,10 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background 0.3s ease;
-      
+
       &:hover {
         background: var(--primary-hover);
       }
     }
   }
-} 
+}

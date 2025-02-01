@@ -1,4 +1,4 @@
-import {MouseEvent, ReactNode } from "react";
+import { MouseEvent, ReactNode } from "react";
 import { Button, ButtonProps } from "react-bootstrap";
 
 interface CustomButtonProps extends ButtonProps {

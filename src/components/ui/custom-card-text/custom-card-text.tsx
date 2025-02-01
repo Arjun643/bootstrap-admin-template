@@ -1,4 +1,4 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { CardText, CardTextProps } from "react-bootstrap";
 
 interface CustomCardTextProps extends CardTextProps {

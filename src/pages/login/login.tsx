@@ -1,4 +1,13 @@
-import { getLocalStorageData, setLocalStorageData, clearLocalStorageData, loginApi, LoginDetailsError, ApiError, ValidationError, ValidationErrorItem } from "utility";
+import {
+  getLocalStorageData,
+  setLocalStorageData,
+  clearLocalStorageData,
+  loginApi,
+  LoginDetailsError,
+  ApiError,
+  ValidationError,
+  ValidationErrorItem,
+} from "utility";
 import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +15,6 @@ import { CustomForm, CustomFormLabel, CustomLink, DynamicHtmlTag, CustomInput } 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginSchema } from "utility";
-
 
 export default function Login() {
   const navigate = useNavigate();
@@ -50,8 +58,7 @@ export default function Login() {
         toast.error((err as ApiError).response.data.message);
       } else if ((err as ValidationError).inner) {
         const validationErrors = (err as ValidationError).inner.reduce(
-          (acc: LoginDetailsError, { path, message }: ValidationErrorItem) => 
-            path ? { ...acc, [path]: message } : acc,
+          (acc: LoginDetailsError, { path, message }: ValidationErrorItem) => (path ? { ...acc, [path]: message } : acc),
           {}
         );
         setErrors(validationErrors);
@@ -111,11 +118,7 @@ export default function Login() {
                   className="form-control pr-5"
                   placeholder="Enter your password"
                 />
-                <DynamicHtmlTag
-                  type="span"
-                  className="cursor-pointer eye-icon-cursor-pointer"
-                  onClick={() => setShowPassword(!showPassword)} 
-                >
+                <DynamicHtmlTag type="span" className="cursor-pointer eye-icon-cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
                   <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} className="text-muted" />
                 </DynamicHtmlTag>
               </div>

@@ -1,4 +1,4 @@
-import  { ReactNode } from "react";
+import { ReactNode } from "react";
 import { Modal, ModalProps } from "react-bootstrap";
 
 interface CustomModalProps extends ModalProps {

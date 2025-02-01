@@ -132,6 +132,96 @@ src/
 └── utility/
 ```
 
+## Project Features & Pages
+
+### Dashboard & Analytics
+- 📊 Comprehensive analytics dashboard
+- 📈 Interactive reports and charts
+- 🔍 Data visualization components
+- 📱 Responsive metrics cards
+
+### User Management
+- 👥 User grid with AG Grid integration
+- 📋 User list with Bootstrap styling
+- ✏️ User CRUD operations
+- 🔍 Advanced user search and filtering
+
+### Settings
+- ⚙️ Application configuration
+- 👤 Profile management
+- 🔐 Security settings
+- 🎨 Theme customization
+- 🌐 Language preferences
+
+### Reports
+- 📊 Customizable report generation
+- 📑 Multiple report templates
+- 📤 Export functionality (PDF, Excel)
+- 📅 Scheduled reports
+
+## UI Components & Styling
+
+### Bootstrap Admin Template Integration
+- 🎨 Custom Bootstrap SCSS theming
+- 📱 Responsive admin dashboard layout
+- 🧩 Pre-built admin components
+- 📊 Dashboard widgets
+
+### Custom Components
+```typescript
+src/
+├── components/
+│   ├── DataGrid/
+│   │   ├── UserGrid.tsx
+│   │   └── GridActions.tsx
+│   ├── Analytics/
+│   │   ├── Charts/
+│   │   └── Reports/
+│   ├── Settings/
+│   │   ├── ProfileSettings.tsx
+│   │   └── SecuritySettings.tsx
+│   └── UI/
+│       ├── Cards/
+│       ├── Buttons/
+│       └── Forms/
+├── pages/
+│   ├── Dashboard/
+│   ├── UserManagement/
+│   ├── Settings/
+│   └── Reports/
+├── styles/
+│   ├── scss/
+│   │   ├── custom/
+│   │   └── bootstrap-override/
+│   └── themes/
+└── utility/
+```
+
+### SCSS Structure
+- 🎨 Custom variables and mixins
+- 🔧 Bootstrap overrides
+- 📱 Responsive breakpoints
+- 🌈 Theme variations
+
+### Key UI Features
+- 📱 Fully responsive design
+- 🎨 Customizable color schemes
+- 🌙 Dark/Light mode toggle
+- 📊 Interactive data visualizations
+- 🧩 Reusable UI components
+- 📝 Form validations
+- 🔔 Notification system
+
+### Bootstrap Components
+- Navigation bars
+- Sidebar menus
+- Cards and widgets
+- Modal dialogs
+- Custom forms
+- Progress indicators
+- Alert messages
+- Data tables
+
 ## Contributing
 
 1. Fork the repository

@@ -1,11 +1,16 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { EditUser, ForgotPassword, Home, Login, UserList, Reports, Analytics, Settings } from "pages";
 import { Error, Layout } from "components";
+import ProtectedRoute from "utility/protected-routes";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "/",

@@ -1,4 +1,4 @@
-# React Data Grid Application
+# React Bootstrap Admin Panel with  React AG Grid  Table Application
 
 This project is a modern React application featuring AG Grid integration for powerful data table functionality with pagination.
 

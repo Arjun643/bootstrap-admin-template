@@ -31,6 +31,6 @@
     "outDir": "./dist",
     "types": ["node"]
   },
-  "include": ["src"],
+  "include": ["src", "src/types/custom.d.ts"],
   "exclude": ["node_modules"]
 }

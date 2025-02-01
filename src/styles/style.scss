@@ -41,21 +41,6 @@ body {
   margin-top: 0;
 }
 
-.layoutSidebarManage {
-  background-color: #1f2937 !important;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
-  width: 250px;
-  transition: width 0.3s ease;
-  position: relative;
-  z-index: 1000;
-  height: 100%;
-
-  &.collapsed {
-    width: 80px;
-  }
-}
-
 .header-sidebar-scrollManage {
   flex-grow: 1;
   overflow-y: auto;
@@ -298,10 +283,6 @@ body {
     z-index: 1000;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
     width: 250px;
-  }
-
-  &.collapsed {
-    width: 80px;
   }
 
   /* Transitions */

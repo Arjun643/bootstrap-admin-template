@@ -22,7 +22,6 @@ const Sidebar = () => {
       style={{
         width: collapsed ? "80px" : "250px",
         transition: "all 0.3s ease",
-        position: "fixed",
         height: "100vh",
         overflowY: "auto",
       }}>

@@ -11,10 +11,10 @@ import {
 import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { CustomForm, CustomFormLabel, CustomLink, DynamicHtmlTag, CustomInput } from "components";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginSchema } from "utility";
+import "./login.scss";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -74,79 +74,75 @@ export default function Login() {
   }, [navigate, loginUserData]);
 
   return (
-    <DynamicHtmlTag type="div">
-      <DynamicHtmlTag type="div" className="d-flex align-items-center justify-content-center vh-100 bg-light">
-        <DynamicHtmlTag type="div" className="card shadow-lg p-4" style={{ width: "400px", borderRadius: "10px" }}>
-          <DynamicHtmlTag type="div" className="text-center mb-4">
-            <DynamicHtmlTag type="h3" className="fw-bold">
-              Welcome Back
-            </DynamicHtmlTag>
-            <DynamicHtmlTag type="p" className="text-muted">
-              Access your Admin Dashboard
-            </DynamicHtmlTag>
-          </DynamicHtmlTag>
-          <CustomForm onSubmit={handleLogin}>
-            {/* Email Field */}
-            <DynamicHtmlTag type="div" className="mb-3">
-              <CustomFormLabel htmlFor="username" className="form-label">
-                User Name
-              </CustomFormLabel>
-              <CustomInput
-                type="text"
-                id="username"
+    <div className="login-container">
+      <div className="login-card">
+        <div className="login-illustration">
+          <img src="./images/login-image.jpg" alt="Login illustration" />
+        </div>
+
+        <div className="login-form-section">
+          <h1 className="login-title">Login to Dashboard</h1>
+
+          <form onSubmit={handleLogin}>
+            <div className="form-group">
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Email Address"
                 name="username"
                 value={loginCredentials.username}
                 onChange={onFieldChange}
-                placeholder="username"
-                className="form-control"
               />
               {errors.username && <div className="text-danger">{errors.username}</div>}
-            </DynamicHtmlTag>
+            </div>
 
-            {/* Password Field */}
-            <DynamicHtmlTag type="div" className="mb-3">
-              <CustomFormLabel htmlFor="password" className="form-label">
-                Password
-              </CustomFormLabel>
+            <div className="form-group">
               <div style={{ position: "relative" }}>
-                <CustomInput
+                <input
                   type={showPassword ? "text" : "password"}
+                  className="form-control"
+                  placeholder="Password"
+                  name="password"
                   value={loginCredentials.password}
                   onChange={onFieldChange}
-                  id="password"
-                  name="password"
-                  className="form-control pr-5"
-                  placeholder="Enter your password"
                 />
-                <DynamicHtmlTag type="span" className="cursor-pointer eye-icon-cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+                <span
+                  style={{
+                    position: "absolute",
+                    right: "12px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setShowPassword(!showPassword)}>
                   <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} className="text-muted" />
-                </DynamicHtmlTag>
+                </span>
               </div>
               {errors.password && <div className="text-danger">{errors.password}</div>}
-            </DynamicHtmlTag>
+            </div>
 
-            {/* Remember Me and Forgot Password */}
-            <DynamicHtmlTag type="div" className="d-flex justify-content-between align-items-center mb-3">
-              <DynamicHtmlTag type="div" className="form-check">
-                <CustomInput type="checkbox" id="rememberMe" checked={rememberMe} onChange={handleRememberMeChange} className="form-check-input" />
-                <CustomFormLabel htmlFor="rememberMe" className="form-check-label">
-                  Remember Me
-                </CustomFormLabel>
-              </DynamicHtmlTag>
-              <CustomLink to="#" className="text-decoration-none text-primary">
-                Forgot Password?
-              </CustomLink>
-            </DynamicHtmlTag>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <div className="form-check">
+                <input type="checkbox" className="form-check-input" id="rememberMe" checked={rememberMe} onChange={handleRememberMeChange} />
+                <label className="form-check-label" htmlFor="rememberMe">
+                  Remember me
+                </label>
+              </div>
+              <a href="#" className="forgot-password">
+                Forgot password?
+              </a>
+            </div>
 
-            {/* Login Button */}
-            <DynamicHtmlTag type="div" className="d-grid">
-              <button type="submit" className="btn btn-primary">
-                Login
-              </button>
-            </DynamicHtmlTag>
-          </CustomForm>
-        </DynamicHtmlTag>
-      </DynamicHtmlTag>
-    </DynamicHtmlTag>
+            <button type="submit" className="login-btn">
+              LOGIN
+            </button>
+
+            <div className="signup-text">
+              Don't have an account? <a href="#">Sign up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }

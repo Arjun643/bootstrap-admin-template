@@ -136,10 +136,6 @@ export default function Login() {
             <button type="submit" className="login-btn">
               LOGIN
             </button>
-
-            <div className="signup-text">
-              Don't have an account? <a href="#">Sign up</a>
-            </div>
           </form>
         </div>
       </div>

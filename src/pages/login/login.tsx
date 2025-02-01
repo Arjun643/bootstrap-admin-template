@@ -86,7 +86,7 @@ export default function Login() {
           <form onSubmit={handleLogin}>
             <div className="form-group">
               <input
-                type="email"
+                type="text"
                 className="form-control"
                 placeholder="Email Address"
                 name="username"

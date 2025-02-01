@@ -1,0 +1,40 @@
+.sidebar {
+  background-color: #1e2a3a;
+  z-index: 1000;
+
+  &.sidebar-collapsed {
+    width: 80px !important;
+    min-width: 80px !important;
+
+    .custom-nav-link span {
+      display: none;
+    }
+  }
+}
+
+.custom-nav-link {
+  display: flex !important;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 15px;
+  white-space: nowrap;
+
+  svg {
+    font-size: 20px;
+    min-width: 20px;
+  }
+
+  span {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.main-content {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+
+  &.sidebar-collapsed {
+    margin-left: 80px;
+  }
+}

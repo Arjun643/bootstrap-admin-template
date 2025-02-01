@@ -6,7 +6,7 @@ const LOGIN_API_URL = process.env.REACT_APP_API_LOGIN_URL;
 
 export const userListApi = async (page: number, limit: number) => {
   try {
-    const API_URL = `arjun-exiliensoft/arjun_data/data?_page=${page}&_limit=${limit}`;
+    const API_URL = `Arjun643/arjun_maurya_data/data?_page=${page}&_limit=${limit}`;
     const response = await axiosInstance.get(API_URL);
     const { data, headers } = response;
     const totalRows = parseInt(headers["x-total-count"]) || 0;
@@ -17,7 +17,7 @@ export const userListApi = async (page: number, limit: number) => {
 };
 export const getUserDetailsApi = async (id: number) => {
   try {
-    const API_URL = `arjun-exiliensoft/arjun_data/data?id=${id}`;
+    const API_URL = `Arjun643/arjun_maurya_data/data?id=${id}`;
     const response = await axiosInstance.get(API_URL);
     return response.data;
   } catch (error) {

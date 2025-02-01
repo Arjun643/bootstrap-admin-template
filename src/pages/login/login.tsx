@@ -82,7 +82,7 @@ export default function Login() {
               Welcome Back
             </DynamicHtmlTag>
             <DynamicHtmlTag type="p" className="text-muted">
-              Access your Exiliensoft Admin Dashboard
+              Access your Admin Dashboard
             </DynamicHtmlTag>
           </DynamicHtmlTag>
           <CustomForm onSubmit={handleLogin}>
